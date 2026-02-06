@@ -30,12 +30,11 @@ export function AboutUs() {
         <div className="relative w-full max-w-[608px] flex-shrink-0">
           <div className="overflow-hidden rounded-3xl shadow-xl">
             <Image
-              src="https://placehold.co/608x608/f1f5f9/64748b?text=Team"
-              alt="About us"
+              src="/images/team.png"
+              alt="Our team"
               width={608}
               height={608}
               className="h-auto w-full object-cover"
-              unoptimized
             />
           </div>
           <div className="absolute bottom-0 right-0 flex h-32 w-32 flex-col items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500 to-indigo-400 text-white shadow-xl">

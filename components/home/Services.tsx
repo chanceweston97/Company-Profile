@@ -33,19 +33,33 @@ const services = [
   },
 ];
 
-function CodeIcon({ className }: { className?: string }) {
+/* Web Development: code angle brackets < > */
+function CodeAngleIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <svg className={className} width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
     </svg>
   );
 }
 
-function MobileIcon({ className }: { className?: string }) {
+/* Mobile App Development: smartphone outline with dot (like screenshot) */
+function MobilePhoneIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <rect x="5" y="2" width="14" height="20" rx="2" />
-      <path d="M12 18h.01" />
+    <svg className={className} width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="5" y="2" width="14" height="20" rx="2.5" />
+      <circle cx="12" cy="16" r="1.5" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+/* API Development: database */
+function DatabaseIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <ellipse cx="12" cy="5" rx="9" ry="3" />
+      <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+      <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+      <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
     </svg>
   );
 }
@@ -58,14 +72,6 @@ function CloudIcon({ className }: { className?: string }) {
   );
 }
 
-function ApiIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M4 7h16M4 12h10M4 17h6" />
-    </svg>
-  );
-}
-
 function ShieldIcon({ className }: { className?: string }) {
   return (
     <svg className={className} width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -74,15 +80,84 @@ function ShieldIcon({ className }: { className?: string }) {
   );
 }
 
-function ChartIcon({ className }: { className?: string }) {
+/* Performance Optimization: electricity / lightning */
+function LightningIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M3 3v18h18M18 17V9M13 17V5M8 17v-3" />
+    <svg className={className} width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
     </svg>
   );
 }
 
-const icons = [CodeIcon, MobileIcon, CloudIcon, ApiIcon, ShieldIcon, ChartIcon];
+const icons = [CodeAngleIcon, MobilePhoneIcon, CloudIcon, DatabaseIcon, ShieldIcon, LightningIcon];
+
+function ServiceCard({
+  title,
+  description,
+  href,
+  icon: Icon,
+}: {
+  title: string;
+  description: string;
+  href: string;
+  icon: React.ComponentType<{ className?: string }>;
+}) {
+  return (
+    <div className="relative w-full">
+      {/* Gradient background layer (150deg, 0.05 opacity) */}
+      <div
+        className="absolute inset-0 rounded-2xl"
+        style={{
+          background: "linear-gradient(150deg, rgba(99, 102, 241, 0.05) 0%, rgba(129, 140, 248, 0.05) 100%)",
+        }}
+      />
+      {/* Card */}
+      <div
+        className="relative flex min-h-[314px] w-full flex-col rounded-xl bg-white/80 outline outline-1 -outline-offset-1 outline-white/40 backdrop-blur-[2px]"
+        style={{
+          boxShadow: "0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.10)",
+        }}
+      >
+        {/* Icon: 56x56, left 33px top 33px */}
+        <div
+          className="absolute left-[33px] top-[33px] flex h-14 w-14 items-center justify-center overflow-hidden rounded-xl text-white"
+          style={{
+            background: "linear-gradient(135deg, #6366F1 0%, #818CF8 100%)",
+            boxShadow: "0px 4px 6px -4px rgba(0, 0, 0, 0.10), 0px 10px 15px -3px rgba(0, 0, 0, 0.10)",
+          }}
+        >
+          <Icon className="h-7 w-7" />
+        </div>
+        {/* Title: left 33px top 109px, 20px font-semibold */}
+        <div className="absolute left-[33px] top-[109px] max-w-[345px]">
+          <h3
+            className="text-xl font-semibold text-slate-900"
+            style={{ fontFamily: "var(--font-inter), Inter, sans-serif", lineHeight: "28px" }}
+          >
+            {title}
+          </h3>
+        </div>
+        {/* Description: left 33px top 148px, 14px */}
+        <div className="absolute left-[33px] top-[148px] max-w-[345px]">
+          <p
+            className="text-sm text-slate-500"
+            style={{ fontFamily: "var(--font-inter), Inter, sans-serif", lineHeight: "22.75px" }}
+          >
+            {description}
+          </p>
+        </div>
+        {/* Learn More: left 33px top 241px, outline only */}
+        <Link
+          href={href}
+          className="absolute left-[33px] top-[241px] inline-flex items-center justify-center rounded-full px-[22px] py-2.5 outline outline-2 -outline-offset-2 outline-indigo-500 transition-colors hover:bg-indigo-50"
+          style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
+        >
+          <span className="text-sm font-medium leading-5 text-indigo-500">Learn More</span>
+        </Link>
+      </div>
+    </div>
+  );
+}
 
 export function Services() {
   return (
@@ -100,31 +175,15 @@ export function Services() {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, i) => {
-            const Icon = icons[i] ?? CodeIcon;
+            const Icon = icons[i] ?? CodeAngleIcon;
             return (
-              <div
+              <ServiceCard
                 key={service.title}
-                className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-500/5 to-indigo-400/5"
-              >
-                <div className="relative rounded-xl border border-white/40 bg-white/80 p-8 shadow-sm backdrop-blur-[2px]">
-                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-400 text-white shadow-md">
-                    <Icon className="h-7 w-7" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-slate-900" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
-                    {service.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-[22.75px] text-slate-500" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
-                    {service.description}
-                  </p>
-                  <Link
-                    href={service.href}
-                    className="mt-6 inline-flex rounded-full border-2 border-indigo-500 px-5 py-2.5 text-sm font-medium text-indigo-500 transition-colors hover:bg-indigo-50"
-                    style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
-                  >
-                    Learn More
-                  </Link>
-                </div>
-              </div>
+                title={service.title}
+                description={service.description}
+                href={service.href}
+                icon={Icon}
+              />
             );
           })}
         </div>

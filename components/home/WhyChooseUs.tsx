@@ -72,16 +72,34 @@ export function WhyChooseUs() {
           {reasons.map((reason, i) => {
             const Icon = icons[i] ?? ChartIcon;
             return (
-              <div key={reason.title} className="relative overflow-hidden rounded-2xl bg-gradient-to-b from-indigo-500/5 to-indigo-400/5">
-                <div className="relative flex gap-4 rounded-xl border border-white/40 bg-white/80 p-8 shadow-sm backdrop-blur-[2px]">
-                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-400 text-white shadow-md">
+              <div
+                key={reason.title}
+                className="flex rounded-xl bg-white/80 outline outline-1 -outline-offset-1 outline-white/40 backdrop-blur-[2px]"
+                style={{
+                  boxShadow: "0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.10)",
+                }}
+              >
+                <div className="flex w-full items-start p-[33px]">
+                  <div
+                    className="flex h-12 w-12 flex-shrink-0 items-center justify-center overflow-hidden rounded-xl text-white"
+                    style={{
+                      background: "linear-gradient(135deg, #6366F1 0%, #818CF8 100%)",
+                      boxShadow: "0px 4px 6px -4px rgba(0, 0, 0, 0.10), 0px 10px 15px -3px rgba(0, 0, 0, 0.10)",
+                    }}
+                  >
                     <Icon className="h-6 w-6" />
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-slate-900" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
+                  <div className="ml-4 flex min-w-0 flex-1 flex-col gap-[6.88px] md:min-w-[370px]">
+                    <h3
+                      className="text-lg font-semibold text-slate-900"
+                      style={{ fontFamily: "var(--font-inter), Inter, sans-serif", lineHeight: "28px" }}
+                    >
                       {reason.title}
                     </h3>
-                    <p className="mt-2 text-sm leading-[22.75px] text-slate-500" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
+                    <p
+                      className="text-sm text-slate-500"
+                      style={{ fontFamily: "var(--font-inter), Inter, sans-serif", lineHeight: "22.75px" }}
+                    >
                       {reason.description}
                     </p>
                   </div>
