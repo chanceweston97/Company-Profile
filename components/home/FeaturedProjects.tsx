@@ -40,7 +40,7 @@ export function FeaturedProjects() {
 
         <div className="grid gap-6 md:grid-cols-3">
           {projects.map((project) => (
-            <div key={project.title} className="overflow-hidden rounded-xl border border-white/40 bg-white/80 shadow-sm backdrop-blur-[2px]">
+            <div key={project.title} className="overflow-hidden rounded-xl border border-white/40 bg-white/80 shadow-sm backdrop-blur-[2px] transition-shadow duration-300 hover:shadow-xl">
               <div className="relative h-48 w-full overflow-hidden bg-slate-100">
                 <Image
                   src={project.image}

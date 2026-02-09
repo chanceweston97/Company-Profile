@@ -113,10 +113,7 @@ function ServiceCard({
       />
       {/* Card */}
       <div
-        className="relative flex min-h-[314px] w-full flex-col rounded-xl bg-white/80 outline outline-1 -outline-offset-1 outline-white/40 backdrop-blur-[2px]"
-        style={{
-          boxShadow: "0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.10)",
-        }}
+        className="relative flex min-h-[314px] w-full flex-col rounded-xl bg-white/80 shadow-sm outline outline-1 -outline-offset-1 outline-white/40 backdrop-blur-[2px] transition-shadow duration-300 hover:shadow-xl"
       >
         {/* Icon: 56x56, left 33px top 33px */}
         <div

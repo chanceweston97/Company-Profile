@@ -55,10 +55,7 @@ export function Testimonials() {
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="flex flex-col gap-4 rounded-xl bg-white/80 outline outline-1 -outline-offset-1 outline-white/40 backdrop-blur-[2px] p-[33px]"
-              style={{
-                boxShadow: "0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.10)",
-              }}
+              className="flex flex-col gap-4 rounded-xl bg-white/80 shadow-sm outline outline-1 -outline-offset-1 outline-white/40 backdrop-blur-[2px] p-[33px] transition-shadow duration-300 hover:shadow-xl"
             >
               <QuoteIcon />
               <div className="flex flex-col">

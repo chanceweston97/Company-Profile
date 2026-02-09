@@ -79,7 +79,7 @@ export function HowItWorks() {
             return (
               <div key={step.number} className="flex w-full max-w-[296px] flex-col items-center text-center">
                 <div className="relative mb-6">
-                  <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-indigo-500 text-white shadow-md">
+                  <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-indigo-500 text-white shadow-md transition-shadow duration-300 hover:shadow-xl">
                     <Icon className="h-8 w-8" />
                   </div>
                   <span className="absolute -right-6 -top-2 flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-indigo-500 text-sm font-bold text-white shadow">

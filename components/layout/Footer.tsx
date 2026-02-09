@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
+import { WestonLogo } from "@/components/ui/WestonLogo";
 
 const footerLinks = {
   product: [
@@ -22,8 +23,8 @@ export function Footer() {
         <div className="py-12 md:py-16">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div>
-              <Link href="/" className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
-                NineWorx
+              <Link href="/" className="inline-block text-zinc-900 dark:text-zinc-100">
+                <WestonLogo className="h-12 w-32 object-contain md:h-14 md:w-36" />
               </Link>
               <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
                 Software services that scale with your business.
@@ -66,7 +67,7 @@ export function Footer() {
           </div>
           <div className="mt-12 border-t border-zinc-200 pt-8 dark:border-zinc-800">
             <p className="text-center text-sm text-zinc-500 dark:text-zinc-400">
-              © {currentYear} NineWorx. All rights reserved.
+              © {currentYear} Weston Tech Solutions. All rights reserved.
             </p>
           </div>
         </div>

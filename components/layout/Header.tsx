@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { WestonLogo } from "@/components/ui/WestonLogo";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -30,15 +30,8 @@ export function Header() {
       <div className="mx-auto flex max-w-[1280px] min-w-0 flex-col items-start justify-start px-8">
         <div className="flex h-20 w-full items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
-            <Image
-              src="/logo/nine_worx_logo.svg"
-              alt="NineWorx"
-              width={176}
-              height={64}
-              className="h-16 w-44 rounded object-contain"
-              priority
-            />
+          <Link href="/" className="flex-shrink-0 text-white">
+            <WestonLogo className="h-16 w-44 object-contain" />
           </Link>
 
           {/* Desktop nav */}

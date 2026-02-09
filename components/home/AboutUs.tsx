@@ -28,7 +28,7 @@ export function AboutUs() {
         </div>
 
         <div className="relative w-full max-w-[608px] flex-shrink-0">
-          <div className="overflow-hidden rounded-3xl shadow-xl">
+          <div className="overflow-hidden rounded-3xl shadow-xl transition-shadow duration-300 hover:shadow-2xl">
             <Image
               src="/images/team.png"
               alt="Our team"
@@ -37,7 +37,7 @@ export function AboutUs() {
               className="h-auto w-full object-cover"
             />
           </div>
-          <div className="absolute bottom-0 right-0 flex h-32 w-32 flex-col items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500 to-indigo-400 text-white shadow-xl">
+          <div className="absolute bottom-0 right-0 flex h-32 w-32 flex-col items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500 to-indigo-400 text-white shadow-xl transition-shadow duration-300 hover:shadow-2xl">
             <span className="text-3xl font-bold leading-10">8+</span>
             <span className="text-sm">Years</span>
           </div>

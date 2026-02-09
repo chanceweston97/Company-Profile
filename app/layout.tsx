@@ -20,7 +20,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "NineWorx — Software Services",
+  title: "Weston Tech Solutions",
   description: "Software services that scale with your business.",
 };
 

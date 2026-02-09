@@ -35,7 +35,7 @@ function useCountUp(end: number, durationMs: number) {
 function AnimatedStat({ end, label }: { end: number; label: string }) {
   const value = useCountUp(end, DURATION_MS);
   return (
-    <div className="flex flex-col items-center gap-1">
+    <div className="flex flex-col items-center gap-1 rounded-xl px-4 py-3 transition-shadow duration-300 hover:shadow-lg">
       <span
         className="text-3xl font-bold leading-10 text-indigo-500 sm:text-4xl"
         style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
