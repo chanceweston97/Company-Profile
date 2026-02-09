@@ -1,80 +1,126 @@
 "use client";
 
 import Link from "next/link";
-import { Container } from "@/components/ui/Container";
 import { WestonLogo } from "@/components/ui/WestonLogo";
-import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 
-const footerLinks = {
-  product: [
-    { href: "/services", label: "Services" },
-    { href: "/portfolio", label: "Portfolio" },
-    { href: "/contact", label: "Contact" },
-  ],
-  company: [
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
-  ],
-};
+const quickLinks = [
+  { href: "/", label: "Home" },
+  { href: "/services", label: "Services" },
+  { href: "/pricing", label: "Pricing" },
+  { href: "/about", label: "About" },
+];
+
+const serviceLinks = [
+  { href: "/services#web-development", label: "Web Development" },
+  { href: "/services#mobile-apps", label: "Mobile Apps" },
+  { href: "/services#consulting", label: "Consulting" },
+  { href: "/contact", label: "Book a Session" },
+];
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900/50">
-      <Container>
-        <div className="py-12 md:py-16">
-          <AnimateOnScroll direction="up" amount={0.1} className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            <div>
-              <Link href="/" className="inline-block text-zinc-900 dark:text-zinc-100">
-                <WestonLogo className="h-12 w-32 object-contain md:h-14 md:w-36" />
-              </Link>
-              <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-                Software services that scale with your business.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-zinc-900 dark:text-zinc-50">
-                Product
-              </h3>
-              <ul className="mt-4 space-y-2">
-                {footerLinks.product.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-zinc-900 dark:text-zinc-50">
-                Company
-              </h3>
-              <ul className="mt-4 space-y-2">
-                {footerLinks.company.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </AnimateOnScroll>
-          <AnimateOnScroll direction="none" delay={0.15} className="mt-12 border-t border-zinc-200 pt-8 dark:border-zinc-800">
-            <p className="text-center text-sm text-zinc-500 dark:text-zinc-400">
-              © {currentYear} Weston Tech Solutions. All rights reserved.
+    <footer className="w-full border-t border-gray-100 bg-black px-[80px] pt-px">
+      <div className="mx-auto flex w-full max-w-[1280px] flex-col items-start justify-start gap-8 px-8 py-12">
+        <div className="flex w-full flex-wrap items-end justify-center gap-8">
+          {/* Logo + tagline */}
+          <div className="flex w-[280px] flex-col gap-4">
+            <Link href="/" className="text-white">
+              <WestonLogo className="h-[63px] w-[178px] object-contain" />
+            </Link>
+            <p className="font-inter text-sm font-normal leading-5 text-white">
+              Expert software solutions delivered online with 8 years of experience.
             </p>
-          </AnimateOnScroll>
+          </div>
+
+          {/* Quick Links */}
+          <div className="flex w-[280px] flex-col gap-4">
+            <h3 className="font-inter text-base font-semibold leading-[19.2px] text-white">
+              Quick Links
+            </h3>
+            <ul className="flex flex-col gap-2">
+              {quickLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="font-inter text-sm font-normal leading-5 text-white transition-colors hover:opacity-80"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div className="flex w-[280px] flex-col gap-4">
+            <h3 className="font-inter text-base font-semibold leading-[19.2px] text-white">
+              Services
+            </h3>
+            <ul className="flex flex-col gap-2">
+              {serviceLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="font-inter text-sm font-normal leading-5 text-white transition-colors hover:opacity-80"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div className="flex w-[280px] flex-col gap-4">
+            <h3 className="font-inter text-base font-semibold leading-[19.2px] text-white">
+              Contact
+            </h3>
+            <a
+              href="mailto:ceo@westontechsolutions.com"
+              className="flex items-center gap-2 font-inter text-sm font-normal leading-5 text-white transition-colors hover:opacity-80"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.33"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden
+              >
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              ceo@westontechsolutions.com
+            </a>
+          </div>
         </div>
-      </Container>
+
+        {/* Bottom bar */}
+        <div className="flex w-full items-center justify-between border-t border-gray-100 pt-8">
+          <p className="font-inter text-sm font-normal leading-5 text-white">
+            © {currentYear} Weston Tech Solutions. All rights reserved.
+          </p>
+          <div className="flex items-center gap-6">
+            <Link
+              href="/privacy"
+              className="font-inter text-sm font-normal leading-5 text-white transition-colors hover:opacity-80"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="/terms"
+              className="font-inter text-sm font-normal leading-5 text-white transition-colors hover:opacity-80"
+            >
+              Terms of Service
+            </Link>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 }
