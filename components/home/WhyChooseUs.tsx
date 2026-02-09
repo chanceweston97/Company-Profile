@@ -61,7 +61,7 @@ const icons = [ChartIcon, UsersIcon, ZapIcon, ClockIcon];
 
 export function WhyChooseUs() {
   return (
-    <section className="bg-white px-20 py-24">
+    <section className="bg-white px-6 py-12 md:px-20 md:py-24">
       <div className="mx-auto max-w-[1280px] flex flex-col gap-16">
         <AnimateOnScroll direction="up" className="flex flex-col items-center gap-4">
           <h2 className="text-center text-4xl font-bold leading-tight text-slate-900 md:text-5xl" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>

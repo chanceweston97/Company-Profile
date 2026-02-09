@@ -66,7 +66,7 @@ const stepIcons = [CalendarIcon, ClipboardIcon, CodeBracketIcon, RocketIcon];
 
 export function HowItWorks() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-white to-indigo-50/50 px-20 py-24">
+    <section className="relative overflow-hidden bg-gradient-to-b from-white to-indigo-50/50 px-6 py-12 md:px-20 md:py-24">
       <div className="mx-auto max-w-[1280px] flex flex-col gap-16">
         <AnimateOnScroll direction="up" className="flex flex-col items-center gap-4">
           <h2 className="text-center text-4xl font-bold leading-tight text-slate-900 md:text-5xl" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>

@@ -6,7 +6,7 @@ import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 
 export function AboutUs() {
   return (
-    <section className="bg-white px-20 py-24">
+    <section className="bg-white px-6 py-12 md:px-20 md:py-24">
       <div className="mx-auto flex max-w-[1280px] flex-col items-center gap-16 lg:flex-row lg:items-start">
         <AnimateOnScroll direction="right" className="flex max-w-[608px] flex-1 flex-col gap-6">
           <h2 className="text-4xl font-bold leading-tight text-slate-900 md:text-5xl" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>

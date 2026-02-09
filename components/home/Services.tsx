@@ -161,7 +161,7 @@ function ServiceCard({
 
 export function Services() {
   return (
-    <section className="relative bg-white px-20 py-24">
+    <section className="relative bg-white px-6 py-12 md:px-20 md:py-24">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-indigo-50/30 to-transparent" />
       <div className="relative mx-auto max-w-[1280px] flex flex-col gap-16">
         <AnimateOnScroll direction="up" className="flex flex-col items-center gap-4">

@@ -5,7 +5,7 @@ import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 
 export function CTA() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-indigo-500 to-indigo-400 px-20 py-24">
+    <section className="relative overflow-hidden bg-gradient-to-br from-indigo-500 to-indigo-400 px-6 py-12 md:px-20 md:py-24">
       {/* Decorative blur orbs */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute left-[25%] top-0 h-96 w-96 rounded-full bg-white shadow-2xl blur-[32px]" />
