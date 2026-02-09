@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { AnimateOnScroll, StaggerContainer } from "@/components/ui/AnimateOnScroll";
 
 const services = [
   {
@@ -161,16 +164,16 @@ export function Services() {
     <section className="relative bg-white px-20 py-24">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-indigo-50/30 to-transparent" />
       <div className="relative mx-auto max-w-[1280px] flex flex-col gap-16">
-        <div className="flex flex-col items-center gap-4">
+        <AnimateOnScroll direction="up" className="flex flex-col items-center gap-4">
           <h2 className="text-center text-4xl font-bold leading-tight text-slate-900 md:text-5xl" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
             Services
           </h2>
           <p className="max-w-[672px] text-center text-xl text-slate-500" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
             Comprehensive software development services tailored to your needs
           </p>
-        </div>
+        </AnimateOnScroll>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" staggerDelay={0.08}>
           {services.map((service, i) => {
             const Icon = icons[i] ?? CodeAngleIcon;
             return (
@@ -183,7 +186,7 @@ export function Services() {
               />
             );
           })}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

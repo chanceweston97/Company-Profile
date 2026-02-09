@@ -1,3 +1,7 @@
+"use client";
+
+import { AnimateOnScroll, StaggerContainer } from "@/components/ui/AnimateOnScroll";
+
 const testimonials = [
   {
     quote:
@@ -42,23 +46,23 @@ export function Testimonials() {
   return (
     <section className="bg-gradient-to-b from-white to-indigo-50/50 px-20 py-24">
       <div className="mx-auto max-w-[1280px] flex flex-col gap-16">
-        <div className="flex flex-col items-center gap-4">
+        <AnimateOnScroll direction="up" className="flex flex-col items-center gap-4">
           <h2 className="text-center text-4xl font-bold leading-tight text-slate-900 md:text-5xl" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
             Client Testimonials
           </h2>
           <p className="max-w-[672px] text-center text-xl text-slate-500" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
             What clients say about working with us
           </p>
-        </div>
+        </AnimateOnScroll>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <StaggerContainer className="grid gap-6 md:grid-cols-3 items-stretch" staggerDelay={0.1}>
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="flex flex-col gap-4 rounded-xl bg-white/80 shadow-sm outline outline-1 -outline-offset-1 outline-white/40 backdrop-blur-[2px] p-[33px] transition-shadow duration-300 hover:shadow-xl"
+              className="flex h-full min-h-0 flex-col gap-4 rounded-xl bg-white/80 shadow-sm outline outline-1 -outline-offset-1 outline-white/40 backdrop-blur-[2px] p-[33px] transition-shadow duration-300 hover:shadow-xl"
             >
               <QuoteIcon />
-              <div className="flex flex-col">
+              <div className="flex min-h-0 flex-1 flex-col">
                 <p
                   className="text-slate-900"
                   style={{ fontFamily: "var(--font-inter), Inter, sans-serif", fontSize: 16, fontWeight: 400, lineHeight: "26px" }}
@@ -100,7 +104,7 @@ export function Testimonials() {
               </div>
             </div>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

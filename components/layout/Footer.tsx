@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { WestonLogo } from "@/components/ui/WestonLogo";
+import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 
 const footerLinks = {
   product: [
@@ -21,7 +24,7 @@ export function Footer() {
     <footer className="border-t border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900/50">
       <Container>
         <div className="py-12 md:py-16">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <AnimateOnScroll direction="up" amount={0.1} className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div>
               <Link href="/" className="inline-block text-zinc-900 dark:text-zinc-100">
                 <WestonLogo className="h-12 w-32 object-contain md:h-14 md:w-36" />
@@ -64,12 +67,12 @@ export function Footer() {
                 ))}
               </ul>
             </div>
-          </div>
-          <div className="mt-12 border-t border-zinc-200 pt-8 dark:border-zinc-800">
+          </AnimateOnScroll>
+          <AnimateOnScroll direction="none" delay={0.15} className="mt-12 border-t border-zinc-200 pt-8 dark:border-zinc-800">
             <p className="text-center text-sm text-zinc-500 dark:text-zinc-400">
               © {currentYear} Weston Tech Solutions. All rights reserved.
             </p>
-          </div>
+          </AnimateOnScroll>
         </div>
       </Container>
     </footer>

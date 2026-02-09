@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 
 export function CTA() {
   return (
@@ -10,12 +13,17 @@ export function CTA() {
       </div>
 
       <div className="relative mx-auto flex max-w-[896px] flex-col items-center gap-6 text-center">
-        <h2 className="text-4xl font-bold leading-tight text-white md:text-5xl" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
-          Ready to Get Started?
-        </h2>
-        <p className="text-xl leading-[32.5px] text-white/90" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
-          Let&apos;s discuss your project and bring your ideas to life
-        </p>
+        <AnimateOnScroll direction="up">
+          <h2 className="text-4xl font-bold leading-tight text-white md:text-5xl" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
+            Ready to Get Started?
+          </h2>
+        </AnimateOnScroll>
+        <AnimateOnScroll direction="up" delay={0.1}>
+          <p className="text-xl leading-[32.5px] text-white/90" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
+            Let&apos;s discuss your project and bring your ideas to life
+          </p>
+        </AnimateOnScroll>
+        <AnimateOnScroll direction="up" delay={0.2}>
         <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
           <Link
             href="/contact"
@@ -38,6 +46,7 @@ export function CTA() {
             </svg>
           </Link>
         </div>
+        </AnimateOnScroll>
       </div>
     </section>
   );

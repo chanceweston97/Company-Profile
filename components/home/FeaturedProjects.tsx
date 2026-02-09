@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { AnimateOnScroll, StaggerContainer } from "@/components/ui/AnimateOnScroll";
 
 const projects = [
   {
@@ -29,16 +32,16 @@ export function FeaturedProjects() {
   return (
     <section className="bg-white px-20 py-24">
       <div className="mx-auto max-w-[1280px] flex flex-col gap-16">
-        <div className="flex flex-col items-center gap-4">
+        <AnimateOnScroll direction="up" className="flex flex-col items-center gap-4">
           <h2 className="text-center text-4xl font-bold leading-tight text-slate-900 md:text-5xl" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
             Featured Projects
           </h2>
           <p className="max-w-[672px] text-center text-xl text-slate-500" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
             Real results from real projects
           </p>
-        </div>
+        </AnimateOnScroll>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <StaggerContainer className="grid gap-6 md:grid-cols-3" staggerDelay={0.1}>
           {projects.map((project) => (
             <div key={project.title} className="overflow-hidden rounded-xl border border-white/40 bg-white/80 shadow-sm backdrop-blur-[2px] transition-shadow duration-300 hover:shadow-xl">
               <div className="relative h-48 w-full overflow-hidden bg-slate-100">
@@ -82,7 +85,7 @@ export function FeaturedProjects() {
               </div>
             </div>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

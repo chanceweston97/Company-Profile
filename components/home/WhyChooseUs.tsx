@@ -1,3 +1,7 @@
+"use client";
+
+import { AnimateOnScroll, StaggerContainer } from "@/components/ui/AnimateOnScroll";
+
 const reasons = [
   {
     title: "8 Years of Experience",
@@ -59,24 +63,24 @@ export function WhyChooseUs() {
   return (
     <section className="bg-white px-20 py-24">
       <div className="mx-auto max-w-[1280px] flex flex-col gap-16">
-        <div className="flex flex-col items-center gap-4">
+        <AnimateOnScroll direction="up" className="flex flex-col items-center gap-4">
           <h2 className="text-center text-4xl font-bold leading-tight text-slate-900 md:text-5xl" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
             Why Choose Us
           </h2>
           <p className="max-w-[672px] text-center text-xl text-slate-500" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
             Proven expertise and commitment to excellence
           </p>
-        </div>
+        </AnimateOnScroll>
 
-        <div className="grid gap-6 sm:grid-cols-2">
+        <StaggerContainer className="grid gap-6 sm:grid-cols-2" staggerDelay={0.1}>
           {reasons.map((reason, i) => {
             const Icon = icons[i] ?? ChartIcon;
             return (
               <div
                 key={reason.title}
-                className="flex rounded-xl bg-white/80 shadow-sm outline outline-1 -outline-offset-1 outline-white/40 backdrop-blur-[2px] transition-shadow duration-300 hover:shadow-xl"
+                className="flex h-full min-h-0 rounded-xl bg-white/80 shadow-sm outline outline-1 -outline-offset-1 outline-white/40 backdrop-blur-[2px] transition-shadow duration-300 hover:shadow-xl"
               >
-                <div className="flex w-full items-start p-[33px]">
+                <div className="flex w-full min-h-full items-start p-[33px]">
                   <div
                     className="flex h-12 w-12 flex-shrink-0 items-center justify-center overflow-hidden rounded-xl text-white"
                     style={{
@@ -104,7 +108,7 @@ export function WhyChooseUs() {
               </div>
             );
           })}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

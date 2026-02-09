@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { WestonLogo } from "@/components/ui/WestonLogo";
 
 const navLinks = [
@@ -26,7 +27,12 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="left-0 top-0 z-50 w-full border-b border-gray-100 bg-black px-20 pb-px backdrop-blur-[6px]">
+    <motion.header
+      initial={{ opacity: 0, y: -12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+      className="left-0 top-0 z-50 w-full border-b border-gray-100 bg-black px-20 pb-px backdrop-blur-[6px]"
+    >
       <div className="mx-auto flex max-w-[1280px] min-w-0 flex-col items-start justify-start px-8">
         <div className="flex h-20 w-full items-center justify-between">
           {/* Logo */}
@@ -124,6 +130,6 @@ export function Header() {
           </div>
         )}
       </div>
-    </header>
+    </motion.header>
   );
 }

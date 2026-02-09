@@ -1,3 +1,7 @@
+"use client";
+
+import { AnimateOnScroll, StaggerContainer } from "@/components/ui/AnimateOnScroll";
+
 const steps = [
   {
     number: "1",
@@ -64,16 +68,16 @@ export function HowItWorks() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-white to-indigo-50/50 px-20 py-24">
       <div className="mx-auto max-w-[1280px] flex flex-col gap-16">
-        <div className="flex flex-col items-center gap-4">
+        <AnimateOnScroll direction="up" className="flex flex-col items-center gap-4">
           <h2 className="text-center text-4xl font-bold leading-tight text-slate-900 md:text-5xl" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
             How It Works
           </h2>
           <p className="max-w-[672px] text-center text-xl text-slate-500" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
             A simple, transparent process from start to finish
           </p>
-        </div>
+        </AnimateOnScroll>
 
-        <div className="flex flex-wrap justify-center gap-8 lg:gap-6">
+        <StaggerContainer className="flex flex-wrap justify-center gap-8 lg:gap-6" staggerDelay={0.12}>
           {steps.map((step, i) => {
             const Icon = stepIcons[i] ?? CalendarIcon;
             return (
@@ -95,7 +99,7 @@ export function HowItWorks() {
               </div>
             );
           })}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 import { HeroStats } from "./HeroStats";
 
 /* Floating decorative dots - positions from design (1440x874) */
@@ -135,46 +138,52 @@ export function Hero() {
 
       {/* Main content (centered) */}
       <div className="relative z-10 mx-auto flex max-w-[1024px] flex-col items-center px-4 pt-[7rem] pb-20 sm:px-8">
-        <div className="mb-6 inline-flex items-center rounded-full bg-white/90 px-5 py-2.5 shadow-sm outline outline-1 -outline-offset-1 outline-indigo-500/10 backdrop-blur-[12px]">
-          <span className="text-center font-semibold tracking-[0.35px] text-indigo-500" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
-            PROFESSIONAL SOFTWARE SERVICES
-          </span>
-        </div>
-
-        <h1 className="text-center text-5xl font-bold leading-[72px] text-slate-900 sm:text-6xl md:text-7xl" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
-          Build professional software
-          <br />
-          <span className="text-indigo-500">that grows with your business.</span>
-        </h1>
-
-        <p className="mt-10 max-w-[768px] text-center text-xl text-slate-500 sm:text-2xl" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
-          Create standout applications with expert development - it looks great and works flawlessly on any device.
-        </p>
-
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-indigo-500 px-8 py-4 text-lg font-medium text-white shadow-lg shadow-indigo-500/20 transition-colors hover:bg-indigo-600"
-            style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
-          >
-            Book a Free Session
-            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-indigo-500 bg-white/90 px-8 py-4 text-lg font-medium text-indigo-500 backdrop-blur-[12px] transition-colors hover:bg-white"
-            style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
-          >
-            Get Started
-            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
-        </div>
-
-        <HeroStats />
+        <AnimateOnScroll direction="up" delay={0.1} duration={0.6}>
+          <div className="mb-6 inline-flex items-center rounded-full bg-white/90 px-5 py-2.5 shadow-sm outline outline-1 -outline-offset-1 outline-indigo-500/10 backdrop-blur-[12px]">
+            <span className="text-center font-semibold tracking-[0.35px] text-indigo-500" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
+              PROFESSIONAL SOFTWARE SERVICES
+            </span>
+          </div>
+        </AnimateOnScroll>
+        <AnimateOnScroll direction="up" delay={0.2} duration={0.6}>
+          <h1 className="text-center text-5xl font-bold leading-[72px] text-slate-900 sm:text-6xl md:text-7xl" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
+            Build professional software
+            <br />
+            <span className="text-indigo-500">that grows with your business.</span>
+          </h1>
+        </AnimateOnScroll>
+        <AnimateOnScroll direction="up" delay={0.35} duration={0.5}>
+          <p className="mt-10 max-w-[768px] text-center text-xl text-slate-500 sm:text-2xl" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
+            Create standout applications with expert development - it looks great and works flawlessly on any device.
+          </p>
+        </AnimateOnScroll>
+        <AnimateOnScroll direction="up" delay={0.45} duration={0.5}>
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-indigo-500 px-8 py-4 text-lg font-medium text-white shadow-lg shadow-indigo-500/20 transition-colors hover:bg-indigo-600"
+              style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
+            >
+              Book a Free Session
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-indigo-500 bg-white/90 px-8 py-4 text-lg font-medium text-indigo-500 backdrop-blur-[12px] transition-colors hover:bg-white"
+              style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
+            >
+              Get Started
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+        </AnimateOnScroll>
+        <AnimateOnScroll direction="up" delay={0.55} duration={0.5}>
+          <HeroStats />
+        </AnimateOnScroll>
       </div>
     </section>
   );

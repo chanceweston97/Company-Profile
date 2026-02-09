@@ -1,11 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 
 export function AboutUs() {
   return (
     <section className="bg-white px-20 py-24">
       <div className="mx-auto flex max-w-[1280px] flex-col items-center gap-16 lg:flex-row lg:items-start">
-        <div className="flex max-w-[608px] flex-1 flex-col gap-6">
+        <AnimateOnScroll direction="right" className="flex max-w-[608px] flex-1 flex-col gap-6">
           <h2 className="text-4xl font-bold leading-tight text-slate-900 md:text-5xl" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
             About Us
           </h2>
@@ -25,9 +28,9 @@ export function AboutUs() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Link>
-        </div>
+        </AnimateOnScroll>
 
-        <div className="relative w-full max-w-[608px] flex-shrink-0">
+        <AnimateOnScroll direction="left" className="relative w-full max-w-[608px] flex-shrink-0">
           <div className="overflow-hidden rounded-3xl shadow-xl transition-shadow duration-300 hover:shadow-2xl">
             <Image
               src="/images/team.png"
@@ -41,7 +44,7 @@ export function AboutUs() {
             <span className="text-3xl font-bold leading-10">8+</span>
             <span className="text-sm">Years</span>
           </div>
-        </div>
+        </AnimateOnScroll>
       </div>
     </section>
   );
