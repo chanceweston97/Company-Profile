@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const stats = [
   { value: "8+", label: "Years Experience" },
-  { value: "150+", label: "Projects Completed" },
-  { value: "80+", label: "Happy Clients" },
+  { value: "99+", label: "Projects Completed" },
+  { value: "57+", label: "Happy Clients" },
   { value: "15+", label: "Countries Served" },
 ];
 
