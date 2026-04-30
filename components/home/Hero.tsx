@@ -147,14 +147,14 @@ export function Hero() {
         </AnimateOnScroll>
         <AnimateOnScroll direction="up" delay={0.2} duration={0.6}>
           <h1 className="text-center text-5xl font-bold leading-[72px] text-slate-900 sm:text-6xl md:text-7xl" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
-            Build professional software
+          We Build Websites
             <br />
-            <span className="text-indigo-500">that grows with your business.</span>
+            <span className="text-indigo-500">That Bring You<br/> More Clients</span>
           </h1>
         </AnimateOnScroll>
         <AnimateOnScroll direction="up" delay={0.35} duration={0.5}>
           <p className="mt-10 max-w-[768px] text-center text-xl text-slate-500 sm:text-2xl" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
-            Create standout applications with expert development - it looks great and works flawlessly on any device.
+          Custom websites and online stores designed to increase your leads, sales, and revenue.
           </p>
         </AnimateOnScroll>
         <AnimateOnScroll direction="up" delay={0.45} duration={0.5}>
@@ -164,7 +164,7 @@ export function Hero() {
               className="inline-flex items-center justify-center gap-2 rounded-full bg-indigo-500 px-8 py-4 text-lg font-medium text-white shadow-lg shadow-indigo-500/20 transition-colors hover:bg-indigo-600"
               style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
             >
-              Book a Free Session
+              Get Free Website Audit
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -174,7 +174,7 @@ export function Hero() {
               className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-indigo-500 bg-white/90 px-8 py-4 text-lg font-medium text-indigo-500 backdrop-blur-[12px] transition-colors hover:bg-white"
               style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
             >
-              Get Started
+              Book a Free Call
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
