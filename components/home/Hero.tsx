@@ -162,11 +162,11 @@ export function Hero() {
           className="text-center text-4xl font-bold leading-tight md:text-6xl"
           style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
         >
-          <span className="block text-gray-900">We Build Modern Websites</span>
+          <span className="block text-gray-900">Let&apos;s Build Something</span>
           <span className="block bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-            That Drive Real Results
+            That Actually Grows
           </span>
-          <span className="block text-gray-900">For Your Business</span>
+          <span className="block text-gray-900">Your Business</span>
         </motion.h1>
 
         <motion.p
@@ -175,7 +175,7 @@ export function Hero() {
           className="mt-6 max-w-[768px] text-center text-lg text-slate-600 sm:text-xl"
           style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
         >
-          Designed to look great, perform fast, and support your business growth.
+          Websites, AI automation, and scalable systems designed to bring you more leads, sales, and efficiency.
         </motion.p>
 
         <motion.div variants={fadeUp} transition={{ duration: 0.75, ease: "easeOut" }}>
@@ -185,7 +185,7 @@ export function Hero() {
               className="inline-flex items-center justify-center gap-2 rounded-full bg-indigo-500 px-8 py-4 text-lg font-medium text-white shadow-lg shadow-indigo-500/20 transition-colors hover:bg-indigo-600"
               style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
             >
-              Get My Free Website Audit
+              Get My Free Strategy Call
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -195,7 +195,7 @@ export function Hero() {
               className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-indigo-500 bg-white/90 px-8 py-4 text-lg font-medium text-indigo-500 backdrop-blur-[12px] transition-colors hover:bg-white"
               style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
             >
-              Book a Free Call
+              View Our Work
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
