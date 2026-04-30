@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 
 const stats = [
   { end: 8, label: "Years Experience" },
-  { end: 150, label: "Projects Completed" },
-  { end: 80, label: "Happy Clients" },
-  { end: 15, label: "Countries Served" },
+  { end: 97, label: "Projects Completed" },
+  { end: 46, label: "Happy Clients" },
+  { end: 9, label: "Countries Served" },
 ];
 
 const DURATION_MS = 2000;
