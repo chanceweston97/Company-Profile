@@ -27,7 +27,7 @@ export function Footer() {
           {/* Logo + tagline */}
           <div className="flex w-[280px] flex-col gap-4">
             <Link href="/" className="text-white">
-              <WestonLogo className="h-[63px] w-[178px] object-contain" />
+              <WestonLogo className="h-[63px] w-[200px] object-contain" />
             </Link>
             <p className="font-inter text-sm font-normal leading-5 text-white">
               Expert software solutions delivered online with 8 years of experience.
@@ -95,7 +95,7 @@ export function Footer() {
                 <rect x="2" y="4" width="20" height="16" rx="2" />
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
               </svg>
-              ceo@westontechsolutions.com
+              ceo@westonstechsolutions.com
             </a>
           </div>
         </div>
@@ -103,7 +103,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="flex w-full items-center justify-between border-t border-gray-100 pt-8">
           <p className="font-inter text-sm font-normal leading-5 text-white">
-            © {currentYear} Weston Tech Solutions. All rights reserved.
+            © {currentYear} Weston's Tech Solutions. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link

@@ -1,12 +1,12 @@
 export function WestonLogo({ className }: { className?: string }) {
   return (
     <svg
-      width="176"
+      width="180"
       height="64"
       viewBox="0 0 176 64"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
-      aria-label="Weston Tech Solutions logo"
+      aria-label="Westons Tech Solutions logo"
       className={className}
     >
       <g transform="translate(0,8)" fill="currentColor">
@@ -23,11 +23,12 @@ export function WestonLogo({ className }: { className?: string }) {
           fontFamily="Inter, Segoe UI, Arial, sans-serif"
           letterSpacing="1"
         >
-          WESTON
+          WESTONS
         </text>
         <text
-          x="0"
+          x="50"
           y="36"
+          textAnchor="middle"
           fontSize="11"
           fontWeight="500"
           fontFamily="Inter, Segoe UI, Arial, sans-serif"

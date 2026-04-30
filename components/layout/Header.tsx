@@ -37,7 +37,7 @@ export function Header() {
         <div className="flex h-20 w-full items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 text-white">
-            <WestonLogo className="h-16 w-44 object-contain" />
+            <WestonLogo className="h-16 w-[178px] object-contain" />
           </Link>
 
           {/* Desktop nav */}

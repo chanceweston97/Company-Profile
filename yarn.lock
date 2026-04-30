@@ -2,7 +2,7 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 8
+  version: 9
   cacheKey: 10c0
 
 "@alloc/quick-lru@npm:^5.2.0":
@@ -3321,28 +3321,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nineworx@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "nineworx@workspace:."
-  dependencies:
-    "@tailwindcss/postcss": "npm:^4"
-    "@types/node": "npm:^20"
-    "@types/react": "npm:^19"
-    "@types/react-dom": "npm:^19"
-    clsx: "npm:^2.1.1"
-    eslint: "npm:^9"
-    eslint-config-next: "npm:16.1.6"
-    framer-motion: "npm:^12.29.2"
-    next: "npm:16.1.6"
-    next-seo: "npm:^7.1.0"
-    react: "npm:19.2.3"
-    react-dom: "npm:19.2.3"
-    tailwind-merge: "npm:^3.4.0"
-    tailwindcss: "npm:^4"
-    typescript: "npm:^5"
-  languageName: unknown
-  linkType: soft
-
 "node-releases@npm:^2.0.27":
   version: 2.0.27
   resolution: "node-releases@npm:2.0.27"
@@ -4391,6 +4369,28 @@ __metadata:
   checksum: 10c0/4ef57b45aa820d7ac6496e9208559986c665e49447cb072744c13b66925a362d96dd5a46c4530a6b8e203e5db5fe849369444440cb22ecfc26c679359e5dfa3c
   languageName: node
   linkType: hard
+
+"weston-tech-solutions@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "weston-tech-solutions@workspace:."
+  dependencies:
+    "@tailwindcss/postcss": "npm:^4"
+    "@types/node": "npm:^20"
+    "@types/react": "npm:^19"
+    "@types/react-dom": "npm:^19"
+    clsx: "npm:^2.1.1"
+    eslint: "npm:^9"
+    eslint-config-next: "npm:16.1.6"
+    framer-motion: "npm:^12.29.2"
+    next: "npm:16.1.6"
+    next-seo: "npm:^7.1.0"
+    react: "npm:19.2.3"
+    react-dom: "npm:19.2.3"
+    tailwind-merge: "npm:^3.4.0"
+    tailwindcss: "npm:^4"
+    typescript: "npm:^5"
+  languageName: unknown
+  linkType: soft
 
 "which-boxed-primitive@npm:^1.1.0, which-boxed-primitive@npm:^1.1.1":
   version: 1.1.1

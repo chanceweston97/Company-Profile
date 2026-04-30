@@ -163,12 +163,12 @@ export default function ContactPage() {
             <ContactCard
               icon={EmailIcon}
               label="Email"
-              value="ceo@westontechsolutions.com"
+              value="ceo@westonstechsolutions.com"
             />
             <ContactCard
               icon={PhoneIcon}
               label="Phone"
-              value="+1 (555) 123-4567"
+              value="+1 (940) 252-4949"
             />
             <ContactCard
               icon={LocationIcon}
