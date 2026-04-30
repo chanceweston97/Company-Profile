@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { HeroStats } from "./HeroStats";
 
 /* Floating decorative dots - positions from design (1440x874) */
 const dotPositions = [
@@ -190,25 +189,9 @@ export function Hero() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-indigo-500 bg-white/90 px-8 py-4 text-lg font-medium text-indigo-500 backdrop-blur-[12px] transition-colors hover:bg-white"
-              style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
-            >
-              View Our Work
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
           </div>
-          <p className="mt-6 text-center text-sm text-slate-500 sm:text-base" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
-            No upfront commitment ? Fast turnaround ? Results-focused
-          </p>
         </motion.div>
 
-        <motion.div variants={fadeUp} transition={{ duration: 0.75, ease: "easeOut" }}>
-          <HeroStats />
-        </motion.div>
       </motion.div>
     </section>
   );
