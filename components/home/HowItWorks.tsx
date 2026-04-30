@@ -1,52 +1,39 @@
 "use client";
 
+import Link from "next/link";
 import { AnimateOnScroll, StaggerContainer } from "@/components/ui/AnimateOnScroll";
 
 const steps = [
   {
     number: "1",
-    title: "Book a Consultation",
-    description: "Schedule a free consultation to discuss your project requirements and goals.",
+    title: "Tell Us What You Need",
+    description: "Share your idea or business goals, and we’ll guide you on the best approach.",
   },
   {
     number: "2",
-    title: "Define Scope",
-    description: "We collaborate to create a detailed project plan with clear milestones and deliverables.",
+    title: "We Build Your Website",
+    description: "We design and develop a modern website tailored to your business.",
   },
   {
     number: "3",
-    title: "Development",
-    description: "Agile development process with regular updates and feedback loops.",
-  },
-  {
-    number: "4",
-    title: "Delivery & Support",
-    description: "Launch your project with ongoing support and maintenance as needed.",
+    title: "Launch & Grow",
+    description: "Go live with confidence and start attracting more clients.",
   },
 ];
 
-function CalendarIcon({ className }: { className?: string }) {
+function ChatIcon({ className }: { className?: string }) {
   return (
     <svg className={className} width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <rect x="3" y="4" width="18" height="18" rx="2" />
-      <path d="M16 2v4M8 2v4M3 10h18" />
+      <path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5H7l-4 2v-5.5A8.5 8.5 0 1 1 21 11.5z" />
     </svg>
   );
 }
 
-function ClipboardIcon({ className }: { className?: string }) {
+function BuildIcon({ className }: { className?: string }) {
   return (
     <svg className={className} width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
-      <rect x="8" y="2" width="8" height="4" rx="1" />
-    </svg>
-  );
-}
-
-function CodeBracketIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+      <path d="M14.5 6.5l3 3-8.5 8.5H6v-3l8.5-8.5z" />
+      <path d="M13 8l3 3" />
     </svg>
   );
 }
@@ -62,7 +49,7 @@ function RocketIcon({ className }: { className?: string }) {
   );
 }
 
-const stepIcons = [CalendarIcon, ClipboardIcon, CodeBracketIcon, RocketIcon];
+const stepIcons = [ChatIcon, BuildIcon, RocketIcon];
 
 export function HowItWorks() {
   return (
@@ -70,21 +57,21 @@ export function HowItWorks() {
       <div className="mx-auto max-w-[1280px] flex flex-col gap-16">
         <AnimateOnScroll direction="up" className="flex flex-col items-center gap-4">
           <h2 className="text-center text-4xl font-bold leading-tight text-slate-900 md:text-5xl" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
-            How It Works
+            Simple Process
           </h2>
           <p className="max-w-[672px] text-center text-xl text-slate-500" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
-            A simple, transparent process from start to finish
+            A straightforward process to get your website up and running.
           </p>
         </AnimateOnScroll>
 
-        <StaggerContainer className="flex flex-wrap justify-center gap-8 lg:gap-6" staggerDelay={0.12}>
+        <StaggerContainer className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-8" staggerDelay={0.14}>
           {steps.map((step, i) => {
-            const Icon = stepIcons[i] ?? CalendarIcon;
+            const Icon = stepIcons[i] ?? ChatIcon;
             return (
-              <div key={step.number} className="flex w-full max-w-[296px] flex-col items-center text-center">
+              <div key={step.number} className="flex w-full flex-col items-center text-center transition duration-300 hover:scale-105">
                 <div className="relative mb-6">
-                  <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-indigo-500 text-white shadow-md transition-shadow duration-300 hover:shadow-xl">
-                    <Icon className="h-8 w-8" />
+                  <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-indigo-500 text-white shadow-md transition-shadow duration-300 hover:shadow-lg">
+                    <Icon className="h-7 w-7" />
                   </div>
                   <span className="absolute -right-6 -top-2 flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-indigo-500 text-sm font-bold text-white shadow">
                     {step.number}
@@ -100,6 +87,19 @@ export function HowItWorks() {
             );
           })}
         </StaggerContainer>
+
+        <AnimateOnScroll direction="up" delay={0.2} className="flex flex-col items-center gap-4 text-center">
+          <p className="text-2xl font-semibold text-slate-900" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
+            Ready to get started?
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center rounded-full bg-indigo-500 px-7 py-3 text-base font-medium text-white shadow-lg shadow-indigo-500/20 transition-colors hover:bg-indigo-600"
+            style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
+          >
+            Get My Free Website Audit
+          </Link>
+        </AnimateOnScroll>
       </div>
     </section>
   );

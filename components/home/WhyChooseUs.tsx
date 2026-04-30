@@ -4,20 +4,20 @@ import { AnimateOnScroll, StaggerContainer } from "@/components/ui/AnimateOnScro
 
 const reasons = [
   {
-    title: "8 Years of Experience",
-    description: "Proven track record delivering high-quality software solutions across various industries.",
+    title: "Results-Driven Approach",
+    description: "We focus on building solutions that help you get more leads, improve efficiency, and grow your business.",
   },
   {
-    title: "Solid Client Base",
-    description: "Trusted by startups and enterprises alike for reliable, professional service.",
+    title: "AI & Automation Expertise",
+    description: "We go beyond basic development by integrating AI and automation to give your business a competitive edge.",
   },
   {
-    title: "Fast Delivery",
-    description: "Efficient project execution without compromising on quality or attention to detail.",
+    title: "Fast & Reliable Delivery",
+    description: "We deliver high-quality work on time, without unnecessary delays or complexity.",
   },
   {
-    title: "Flexible Scheduling",
-    description: "Work with your timeline and availability for seamless collaboration.",
+    title: "Long-Term Support",
+    description: "We don’t just build and leave — we support your growth with ongoing improvements and updates.",
   },
 ];
 
@@ -40,6 +40,15 @@ function UsersIcon({ className }: { className?: string }) {
   );
 }
 
+function SparklesIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8L12 3z" />
+      <path d="M19 14l.9 2.1L22 17l-2.1.9L19 20l-.9-2.1L16 17l2.1-.9L19 14z" />
+    </svg>
+  );
+}
+
 function ZapIcon({ className }: { className?: string }) {
   return (
     <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -57,7 +66,7 @@ function ClockIcon({ className }: { className?: string }) {
   );
 }
 
-const icons = [ChartIcon, UsersIcon, ZapIcon, ClockIcon];
+const icons = [ChartIcon, SparklesIcon, ZapIcon, ClockIcon];
 
 export function WhyChooseUs() {
   return (
@@ -68,19 +77,22 @@ export function WhyChooseUs() {
             Why Choose Us
           </h2>
           <p className="max-w-[672px] text-center text-xl text-slate-500" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
-            Proven expertise and commitment to excellence
+            Why businesses choose us to build their digital solutions
           </p>
         </AnimateOnScroll>
 
-        <StaggerContainer className="grid gap-6 sm:grid-cols-2" staggerDelay={0.1}>
+        <StaggerContainer className="grid gap-8 sm:grid-cols-2" staggerDelay={0.12}>
           {reasons.map((reason, i) => {
             const Icon = icons[i] ?? ChartIcon;
+            const isAiCard = reason.title === "AI & Automation Expertise";
             return (
               <div
                 key={reason.title}
-                className="flex h-full min-h-0 rounded-xl bg-white/80 shadow-sm outline outline-1 -outline-offset-1 outline-white/40 backdrop-blur-[2px] transition-shadow duration-300 hover:shadow-xl"
+                className={`flex h-full min-h-0 rounded-xl border bg-white/80 backdrop-blur-[2px] transition duration-300 hover:scale-105 hover:shadow-xl ${
+                  isAiCard ? "border-indigo-200 shadow-md shadow-indigo-100/70" : "border-gray-200 shadow-sm"
+                }`}
               >
-                <div className="flex w-full min-h-full items-start p-[33px]">
+                <div className="flex w-full min-h-full items-start p-9">
                   <div
                     className="flex h-12 w-12 flex-shrink-0 items-center justify-center overflow-hidden rounded-xl text-white"
                     style={{
