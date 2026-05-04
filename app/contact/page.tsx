@@ -175,7 +175,7 @@ export default function ContactPage() {
               label="Location"
               value="Remote - Serving clients worldwide"
             />
-            <div className="relative">
+            {/* <div className="relative">
               <div
                 className="absolute inset-0 rounded-2xl opacity-30"
                 style={{ background: "rgba(99, 102, 241, 0.23)", filter: "blur(12px)" }}
@@ -201,7 +201,7 @@ export default function ContactPage() {
                   Join Slack
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Right: Form */}
