@@ -161,7 +161,7 @@ export function Hero() {
           className="text-center text-4xl font-bold leading-tight md:text-6xl"
           style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
         >
-          <span className="block text-gray-900">Struggling to Get Leads or Automate Your Business?</span>
+          <span className="block text-gray-900">We Build AI & Backend Systems That Scale US Businesses</span>
         </motion.h1>
 
         <motion.p
@@ -170,7 +170,7 @@ export function Hero() {
           className="mt-6 max-w-[768px] text-center text-lg text-slate-600 sm:text-xl"
           style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
         >
-          We build AI-powered systems that generate leads, automate operations, and scale your business.
+          We design and develop scalable platforms, AI automation systems, and high-performance backend solutions using Python and .NET for growing businesses.
         </motion.p>
         <motion.p
           variants={fadeUp}
@@ -178,7 +178,7 @@ export function Hero() {
           className="mt-3 text-center text-sm font-medium text-slate-500 sm:text-base"
           style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
         >
-          Websites ? AI Automation ? Backend Systems for US Businesses
+          Python • .NET • AI Automation • Cloud Systems
         </motion.p>
 
         <motion.div variants={fadeUp} transition={{ duration: 0.75, ease: "easeOut" }}>
@@ -188,7 +188,7 @@ export function Hero() {
               className="inline-flex items-center justify-center gap-2 rounded-full bg-indigo-500 px-8 py-4 text-lg font-medium text-white shadow-lg shadow-indigo-500/20 transition-colors hover:bg-indigo-600"
               style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
             >
-              Get a Free Growth Plan
+              Book a Free Consultation
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -198,7 +198,7 @@ export function Hero() {
               className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-indigo-500 bg-white/90 px-8 py-4 text-lg font-medium text-indigo-500 backdrop-blur-[12px] transition-colors hover:bg-white"
               style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
             >
-              Book a Strategy Call
+              Discuss Your Project
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

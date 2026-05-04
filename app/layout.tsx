@@ -20,7 +20,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "AI Automation & Software Development Company USA | Weston Tech Solutions",
+  title: "Westons Tech Solutions | Texas AI & Backend Development Company (Python, .NET)",
   description:
     "We help US businesses generate leads, automate operations, and scale with AI, custom software, and high-performance websites. Serving Texas, Dallas, Houston.",
   keywords: [
