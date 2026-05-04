@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const cardShadow =
   "0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(0, 0, 0, 0), 0px 1px 3px rgba(0, 0, 0, 0.10), 0px 1px 2px rgba(0, 0, 0, 0.06)";
@@ -84,9 +85,24 @@ export default function ContactPage() {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  function handleSubmit(e: React.FormEvent) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? "YOUR_SERVICE_ID",
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? "YOUR_TEMPLATE_ID",
+        e.currentTarget,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ?? "YOUR_PUBLIC_KEY",
+      )
+      .then(() => {
+        alert("Message sent successfully!");
+        setSubmitted(true);
+      })
+      .catch((error) => {
+        console.error("EmailJS error:", error);
+        alert("Failed to send message. Please try again.");
+      });
   }
 
   return (
@@ -236,6 +252,7 @@ export default function ContactPage() {
                       </label>
                       <input
                         type="text"
+                        name="user_name"
                         required
                         placeholder="John Doe"
                         value={formData.name}
@@ -255,6 +272,7 @@ export default function ContactPage() {
                       </label>
                       <input
                         type="email"
+                        name="user_email"
                         required
                         placeholder="john@example.com"
                         value={formData.email}
@@ -275,6 +293,7 @@ export default function ContactPage() {
                     </label>
                     <input
                       type="text"
+                      name="subject"
                       required
                       placeholder="What's this about?"
                       value={formData.subject}
@@ -293,6 +312,7 @@ export default function ContactPage() {
                       Message <span className="text-[#EF4444]">*</span>
                     </label>
                     <textarea
+                      name="message"
                       required
                       placeholder="Tell us about your project..."
                       value={formData.message}
