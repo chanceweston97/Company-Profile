@@ -6,22 +6,22 @@ const testimonials = [
   {
     quote:
       '"Outstanding work! The project was delivered on time and exceeded our expectations. Highly recommended for any software development needs."',
-    name: "Sarah Johnson",
-    role: "CTO at TechStart Inc",
+    name: "Daniel Li",
+    role: "Market & Product Analyst at ZDA Communications LLC",
     initial: "S",
   },
   {
     quote:
       '"Professional, efficient, and incredibly skilled. Our application performance improved by 300% after the optimization work."',
-    name: "Michael Chen",
+    name: "Roy Hahn",
     role: "Product Manager at DataFlow Systems",
     initial: "M",
   },
   {
     quote:
-      '"The best developer we have worked with. Clear communication, expert technical skills, and a genuine commitment to our success."',
-    name: "Emily Rodriguez",
-    role: "Founder at CloudVentures",
+      '"The best company we have worked with. Clear communication, expert technical skills, and a genuine commitment to our success."',
+    name: "Ryan Rader",
+    role: "CEO at HavenLifeStyles",
     initial: "E",
   },
 ];

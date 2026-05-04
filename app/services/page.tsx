@@ -3,13 +3,13 @@ import Link from "next/link";
 const services = [
   {
     id: "web-development",
-    title: "Web Development",
+    title: "Lead Generation Websites",
     description:
       "Custom web applications built with modern frameworks and best practices for scalability and performance.",
   },
   {
     id: "mobile-apps",
-    title: "Mobile App Development",
+    title: "Scalable Mobile Applications",
     description:
       "Native and cross-platform mobile applications that deliver exceptional user experiences.",
   },
@@ -21,19 +21,19 @@ const services = [
   },
   {
     id: "api-development",
-    title: "API Development",
+    title: "Custom Backend Systems",
     description:
       "RESTful and GraphQL APIs designed for performance, security, and seamless integration.",
   },
   {
     id: "security-consulting",
-    title: "Security Consulting",
+    title: "Secure & Scalable Architecture",
     description:
       "Comprehensive security audits and implementation of best practices to protect your applications.",
   },
   {
     id: "performance-optimization",
-    title: "Performance Optimization",
+    title: "Speed & Conversion Optimization",
     description:
       "Speed up your applications with expert optimization techniques and monitoring solutions.",
   },

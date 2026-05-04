@@ -5,13 +5,13 @@ import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 
 const services = [
   {
-    title: "Web Development",
+    title: "Lead Generation Websites",
     description:
       "Modern, fast, and responsive websites designed to represent your brand and support your business growth.",
     href: "/contact",
   },
   {
-    title: "Mobile App Development",
+    title: "Scalable Mobile Applications",
     description:
       "Custom mobile applications built for performance, usability, and seamless user experience.",
     href: "/contact",

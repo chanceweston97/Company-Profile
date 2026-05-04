@@ -32,6 +32,9 @@ export function Footer() {
             <p className="font-inter text-sm font-normal leading-5 text-white">
               Expert software solutions delivered online with 8 years of experience.
             </p>
+            <p className="font-inter text-xs font-normal leading-5 text-gray-300">
+              Serving clients across Texas, Dallas, Houston, Austin, and the United States.
+            </p>
           </div>
 
           {/* Quick Links */}

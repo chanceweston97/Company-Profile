@@ -161,11 +161,7 @@ export function Hero() {
           className="text-center text-4xl font-bold leading-tight md:text-6xl"
           style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
         >
-          <span className="block text-gray-900">Let&apos;s Build Something</span>
-          <span className="block bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-            That Actually Grows
-          </span>
-          <span className="block text-gray-900">Your Business</span>
+          <span className="block text-gray-900">Struggling to Get Leads or Automate Your Business?</span>
         </motion.h1>
 
         <motion.p
@@ -174,7 +170,15 @@ export function Hero() {
           className="mt-6 max-w-[768px] text-center text-lg text-slate-600 sm:text-xl"
           style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
         >
-          Websites, AI automation, and scalable systems designed to bring you more leads, sales, and efficiency.
+          We build AI-powered systems that generate leads, automate operations, and scale your business.
+        </motion.p>
+        <motion.p
+          variants={fadeUp}
+          transition={{ duration: 0.75, ease: "easeOut" }}
+          className="mt-3 text-center text-sm font-medium text-slate-500 sm:text-base"
+          style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
+        >
+          Websites ? AI Automation ? Backend Systems for US Businesses
         </motion.p>
 
         <motion.div variants={fadeUp} transition={{ duration: 0.75, ease: "easeOut" }}>
@@ -184,11 +188,42 @@ export function Hero() {
               className="inline-flex items-center justify-center gap-2 rounded-full bg-indigo-500 px-8 py-4 text-lg font-medium text-white shadow-lg shadow-indigo-500/20 transition-colors hover:bg-indigo-600"
               style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
             >
-              Get My Free Strategy Call
+              Get a Free Growth Plan
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-indigo-500 bg-white/90 px-8 py-4 text-lg font-medium text-indigo-500 backdrop-blur-[12px] transition-colors hover:bg-white"
+              style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
+            >
+              Book a Strategy Call
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+        </motion.div>
+
+        <motion.div variants={fadeUp} transition={{ duration: 0.75, ease: "easeOut" }}>
+          <div className="mt-12 grid grid-cols-2 gap-6 text-center md:grid-cols-4">
+            <div>
+              <h3 className="text-2xl font-bold text-indigo-600">120%+</h3>
+              <p className="text-sm text-gray-500">Lead Increase</p>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-indigo-600">80%</h3>
+              <p className="text-sm text-gray-500">Support Automated</p>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-indigo-600">60%</h3>
+              <p className="text-sm text-gray-500">Cost Reduction</p>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-indigo-600">8+ Years</h3>
+              <p className="text-sm text-gray-500">Experience</p>
+            </div>
           </div>
         </motion.div>
 

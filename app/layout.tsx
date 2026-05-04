@@ -20,8 +20,16 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Weston Tech Solutions",
-  description: "Software services that scale with your business.",
+  title: "AI Automation & Software Development Company USA | Weston Tech Solutions",
+  description:
+    "We help US businesses generate leads, automate operations, and scale with AI, custom software, and high-performance websites. Serving Texas, Dallas, Houston.",
+  keywords: [
+    "AI automation USA",
+    "software development Texas",
+    "web development company USA",
+    "AI chatbot business",
+    "backend development services",
+  ],
 };
 
 export default function RootLayout({
