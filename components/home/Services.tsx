@@ -32,7 +32,7 @@ const services = [
 
 function BotIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg className={className} width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
       <rect x="4" y="7" width="16" height="12" rx="3" />
       <path d="M12 3v4M8 13h.01M16 13h.01M8 17h8" />
     </svg>
@@ -41,7 +41,7 @@ function BotIcon({ className }: { className?: string }) {
 
 function WorkflowIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg className={className} width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
       <circle cx="6" cy="6" r="2" />
       <circle cx="18" cy="6" r="2" />
       <circle cx="12" cy="18" r="2" />
@@ -52,7 +52,7 @@ function WorkflowIcon({ className }: { className?: string }) {
 
 function WebIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg className={className} width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
       <rect x="3" y="4" width="18" height="14" rx="2" />
       <path d="M8 20h8M12 18v2M3 9h18" />
     </svg>
@@ -61,7 +61,7 @@ function WebIcon({ className }: { className?: string }) {
 
 function MobileIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg className={className} width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
       <rect x="7" y="2" width="10" height="20" rx="2" />
       <path d="M11 18h2" />
     </svg>
@@ -124,15 +124,15 @@ function ServiceCard({
 
 export function Services() {
   return (
-    <section className="relative bg-white px-6 py-12 md:px-20 md:py-24">
+    <section className="relative bg-white px-6 py-12 md:px-20 md:py-24" aria-labelledby="home-services-heading">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-indigo-50/30 to-transparent" />
       <div className="relative mx-auto max-w-[1280px] flex flex-col gap-16">
         <AnimateOnScroll direction="up" className="flex flex-col items-center gap-4 text-center">
-          <h2 className="text-center text-4xl font-bold leading-tight text-slate-900 md:text-5xl" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
+          <h2 id="home-services-heading" className="text-center text-4xl font-bold leading-tight text-slate-900 md:text-5xl" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
             What We Can Do For You
           </h2>
           <p className="max-w-[672px] text-center text-xl text-slate-500" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
-            We build smart, scalable solutions using AI, automation, and modern technologies.
+            We build smart, scalable solutions using AI, automation, Python backend development, .NET development services, and modern technologies.
           </p>
         </AnimateOnScroll>
 

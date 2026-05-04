@@ -1,8 +1,19 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Westons Tech Solutions",
+  url: "https://www.westonstechsolutions.com",
+  description:
+    "Texas-based AI and backend development company specializing in Python and .NET",
+  areaServed: "US",
+  sameAs: [],
+};
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +43,11 @@ export const metadata: Metadata = {
   ],
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -39,6 +55,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} flex min-h-screen flex-col antialiased`}>
         <Header />
         <div className="flex-1">{children}</div>

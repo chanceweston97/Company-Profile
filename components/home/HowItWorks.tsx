@@ -23,7 +23,7 @@ const steps = [
 
 function ChatIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <svg className={className} width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
       <path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5H7l-4 2v-5.5A8.5 8.5 0 1 1 21 11.5z" />
     </svg>
   );
@@ -31,7 +31,7 @@ function ChatIcon({ className }: { className?: string }) {
 
 function BuildIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <svg className={className} width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
       <path d="M14.5 6.5l3 3-8.5 8.5H6v-3l8.5-8.5z" />
       <path d="M13 8l3 3" />
     </svg>
@@ -40,7 +40,7 @@ function BuildIcon({ className }: { className?: string }) {
 
 function RocketIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <svg className={className} width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
       <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
       <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
       <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />

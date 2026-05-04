@@ -39,9 +39,9 @@ export function Footer() {
 
           {/* Quick Links */}
           <div className="flex w-[280px] flex-col gap-4">
-            <h3 className="font-inter text-base font-semibold leading-[19.2px] text-white">
+            <h2 className="font-inter text-base font-semibold leading-[19.2px] text-white">
               Quick Links
-            </h3>
+            </h2>
             <ul className="flex flex-col gap-2">
               {quickLinks.map((link) => (
                 <li key={link.href}>
@@ -58,9 +58,9 @@ export function Footer() {
 
           {/* Services */}
           <div className="flex w-[280px] flex-col gap-4">
-            <h3 className="font-inter text-base font-semibold leading-[19.2px] text-white">
+            <h2 className="font-inter text-base font-semibold leading-[19.2px] text-white">
               Services
-            </h3>
+            </h2>
             <ul className="flex flex-col gap-2">
               {serviceLinks.map((link) => (
                 <li key={link.href}>
@@ -77,9 +77,9 @@ export function Footer() {
 
           {/* Contact */}
           <div className="flex w-[280px] flex-col gap-4">
-            <h3 className="font-inter text-base font-semibold leading-[19.2px] text-white">
+            <h2 className="font-inter text-base font-semibold leading-[19.2px] text-white">
               Contact
-            </h3>
+            </h2>
             <a
               href="mailto:ceo@westontechsolutions.com"
               className="flex items-center gap-2 font-inter text-sm font-normal leading-5 text-white transition-colors hover:opacity-80"

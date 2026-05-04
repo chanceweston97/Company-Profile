@@ -5,7 +5,7 @@ import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 
 export function CTA() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-indigo-500 to-indigo-400 px-6 py-12 md:px-20 md:py-24">
+    <section className="relative overflow-hidden bg-gradient-to-br from-indigo-500 to-indigo-400 px-6 py-12 md:px-20 md:py-24" aria-labelledby="home-contact-heading">
       {/* Decorative blur orbs */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute left-[25%] top-0 h-96 w-96 rounded-full bg-white shadow-2xl blur-[32px]" />
@@ -13,6 +13,9 @@ export function CTA() {
       </div>
 
       <div className="relative mx-auto flex max-w-[896px] flex-col items-center gap-6 text-center">
+        <h2 id="home-contact-heading" className="sr-only">
+          Contact
+        </h2>
         <AnimateOnScroll direction="up">
           <h2 className="text-4xl font-bold leading-tight text-white md:text-5xl" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
             Ready to Get Started?
@@ -20,7 +23,7 @@ export function CTA() {
         </AnimateOnScroll>
         <AnimateOnScroll direction="up" delay={0.1}>
           <p className="text-xl leading-[32.5px] text-white/90" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
-            Let&apos;s discuss your project and bring your ideas to life
+            Let&apos;s discuss your project, including Python backend development and .NET development services, and bring your ideas to life
           </p>
         </AnimateOnScroll>
         <AnimateOnScroll direction="up" delay={0.2}>
@@ -31,7 +34,7 @@ export function CTA() {
             style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
           >
             Book a Free Consultation
-            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Link>
@@ -41,7 +44,7 @@ export function CTA() {
             style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
           >
             Contact Us
-            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Link>

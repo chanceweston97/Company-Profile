@@ -55,7 +55,7 @@ export function Hero() {
           <div className="relative flex w-64 flex-col gap-4 rounded-2xl border border-white/40 bg-white/90 p-6 shadow-xl backdrop-blur-[12px] outline outline-1 -outline-offset-1 outline-white/40">
             <div className="flex items-center gap-3">
               <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-400 shadow-md">
-                <Image src="/hero/cloud.svg" alt="" width={24} height={24} className="brightness-0 invert" />
+                <Image src="/hero/cloud.svg" alt="Cloud infrastructure illustration" width={24} height={24} className="brightness-0 invert" />
               </div>
               <div className="flex flex-1 flex-col gap-2">
                 <div className="h-3 w-24 rounded-full bg-gradient-to-r from-gray-200 to-gray-100" />
@@ -76,7 +76,7 @@ export function Hero() {
           <div className="relative flex w-64 flex-col gap-4 rounded-2xl border border-white/40 bg-white/90 p-6 shadow-xl backdrop-blur-[12px] outline outline-1 -outline-offset-1 outline-white/40">
             <div className="flex items-center gap-3">
               <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-400 to-purple-500 shadow-md">
-                <Image src="/hero/light.svg" alt="" width={24} height={24} className="brightness-0 invert" />
+                <Image src="/hero/light.svg" alt="AI development services" width={24} height={24} className="brightness-0 invert" />
               </div>
               <div className="flex flex-1 flex-col gap-2">
                 <div className="h-3 w-24 rounded-full bg-gradient-to-r from-gray-200 to-gray-100" />
@@ -120,7 +120,7 @@ export function Hero() {
           <div className="absolute inset-0 rounded-full bg-indigo-500/30 shadow-[24px_24px_24px] blur-[12px]" />
           <div className="relative flex items-center gap-3 rounded-full border border-white/40 bg-white/95 px-6 py-3.5 shadow-lg backdrop-blur-[12px] outline outline-1 -outline-offset-1 outline-white/40">
             <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-indigo-600">
-              <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
             </div>
@@ -133,7 +133,7 @@ export function Hero() {
           <div className="absolute inset-0 rounded-full bg-indigo-400/30 shadow-[24px_24px_24px] blur-[12px]" />
           <div className="relative flex items-center gap-3 rounded-full border border-white/40 bg-white/95 px-6 py-3.5 shadow-lg backdrop-blur-[12px] outline outline-1 -outline-offset-1 outline-white/40">
             <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-indigo-400 to-purple-600">
-              <Image src="/hero/code.svg" alt="" width={16} height={16} className="brightness-0 invert" />
+              <Image src="/hero/code.svg" alt="Backend development system" width={16} height={16} className="brightness-0 invert" />
             </div>
             <span className="text-sm font-semibold text-slate-900">Cloud Native</span>
           </div>
@@ -170,7 +170,7 @@ export function Hero() {
           className="mt-6 max-w-[768px] text-center text-lg text-slate-600 sm:text-xl"
           style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
         >
-          We design and develop scalable platforms, AI automation systems, and high-performance backend solutions using Python and .NET for growing businesses.
+          As an AI development company in Texas, we design and develop scalable platforms, AI automation systems, and high-performance backend solutions with Python backend development and .NET development services for growing businesses.
         </motion.p>
         <motion.p
           variants={fadeUp}
@@ -178,7 +178,7 @@ export function Hero() {
           className="mt-3 text-center text-sm font-medium text-slate-500 sm:text-base"
           style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
         >
-          Python • .NET • AI Automation • Cloud Systems
+          Python {"\u2022"} .NET {"\u2022"} AI Automation {"\u2022"} Cloud Systems
         </motion.p>
 
         <motion.div variants={fadeUp} transition={{ duration: 0.75, ease: "easeOut" }}>
@@ -189,7 +189,7 @@ export function Hero() {
               style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
             >
               Book a Free Consultation
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
@@ -199,7 +199,7 @@ export function Hero() {
               style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
             >
               Discuss Your Project
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>

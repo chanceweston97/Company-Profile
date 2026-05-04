@@ -30,14 +30,14 @@ const teamMembers = [
 
 export function AboutUs() {
   return (
-    <section className="bg-white px-6 py-12 md:px-20 md:py-24">
+    <section className="bg-white px-6 py-12 md:px-20 md:py-24" aria-labelledby="home-about-heading">
       <div className="mx-auto flex max-w-[1280px] flex-col gap-16">
         <AnimateOnScroll direction="up" className="flex flex-col items-center gap-4 text-center">
-          <h2 className="text-4xl font-bold leading-tight text-slate-900 md:text-5xl" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
+          <h2 id="home-about-heading" className="text-4xl font-bold leading-tight text-slate-900 md:text-5xl" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
             Meet the Team Behind Your Growth
           </h2>
           <p className="max-w-[780px] text-lg leading-[29.25px] text-slate-500" style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
-            A focused team of experts delivering high-performance websites, AI solutions, and scalable systems.
+            A focused team of experts and an AI development company in Texas delivering high-performance websites, AI solutions, and scalable systems.
           </p>
         </AnimateOnScroll>
 
@@ -67,7 +67,7 @@ export function AboutUs() {
             style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
           >
             Book a Free Call
-            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Link>

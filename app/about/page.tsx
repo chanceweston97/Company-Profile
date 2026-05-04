@@ -73,13 +73,13 @@ function ValueIcon({ name }: { name: string }) {
   switch (name) {
     case "excellence":
       return (
-        <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
           <polygon points="12 2 15 8 22 9 17 14 18 21 12 18 6 21 7 14 2 9 9 8" />
         </svg>
       );
     case "client":
       return (
-        <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
           <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
           <circle cx="9" cy="7" r="4" />
           <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
@@ -87,26 +87,26 @@ function ValueIcon({ name }: { name: string }) {
       );
     case "innovation":
       return (
-        <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
           <path d="M9 18h6M10 22h4M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14" />
         </svg>
       );
     case "passion":
       return (
-        <svg className={iconClass} viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg className={iconClass} viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
           <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
         </svg>
       );
     case "quality":
       return (
-        <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
           <polyline points="16 18 22 12 16 6" />
           <polyline points="8 6 2 12 8 18" />
         </svg>
       );
     case "global":
       return (
-        <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
           <circle cx="12" cy="12" r="10" />
           <line x1="2" y1="12" x2="22" y2="12" />
           <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
@@ -119,7 +119,7 @@ function ValueIcon({ name }: { name: string }) {
 
 function ArrowRightIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2" aria-hidden>
       <path d="M5 12h14M12 5l7 7-7 7" />
     </svg>
   );
@@ -185,8 +185,8 @@ export default function AboutPage() {
               className="mt-8 text-[17px] font-normal leading-8 text-[#64748B]"
               style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
             >
-              With 8 years of professional software engineering experience, we&apos;ve
-              helped dozens of companies build and scale their digital products.
+              With 8 years of professional software engineering experience as an AI development company in Texas, we&apos;ve
+              helped dozens of companies build and scale their digital products with Python backend development and .NET development services.
             </p>
             <p
               className="mt-6 text-[15.3px] font-normal leading-[29px] text-[#64748B]"
@@ -225,7 +225,7 @@ export default function AboutPage() {
             >
               <Image
                 src="/images/consult.png"
-                alt="Team or consultation"
+                alt="Software team consultation and AI development services"
                 width={608}
                 height={608}
                 className="h-full w-full object-cover"

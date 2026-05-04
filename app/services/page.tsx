@@ -51,6 +51,7 @@ function CodeAngleIcon({ className }: { className?: string }) {
       strokeWidth="2.33"
       strokeLinecap="round"
       strokeLinejoin="round"
+      aria-hidden
     >
       <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
     </svg>
@@ -69,6 +70,7 @@ function MobilePhoneIcon({ className }: { className?: string }) {
       strokeWidth="2.33"
       strokeLinecap="round"
       strokeLinejoin="round"
+      aria-hidden
     >
       <rect x="5" y="2" width="14" height="20" rx="2.5" />
       <circle cx="12" cy="16" r="1.5" fill="currentColor" stroke="none" />
@@ -88,6 +90,7 @@ function CloudIcon({ className }: { className?: string }) {
       strokeWidth="2.33"
       strokeLinecap="round"
       strokeLinejoin="round"
+      aria-hidden
     >
       <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
     </svg>
@@ -106,6 +109,7 @@ function DatabaseIcon({ className }: { className?: string }) {
       strokeWidth="2.33"
       strokeLinecap="round"
       strokeLinejoin="round"
+      aria-hidden
     >
       <ellipse cx="12" cy="5" rx="9" ry="3" />
       <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
@@ -126,6 +130,7 @@ function ShieldIcon({ className }: { className?: string }) {
       strokeWidth="2.33"
       strokeLinecap="round"
       strokeLinejoin="round"
+      aria-hidden
     >
       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
     </svg>
@@ -144,6 +149,7 @@ function LightningIcon({ className }: { className?: string }) {
       strokeWidth="2.33"
       strokeLinecap="round"
       strokeLinejoin="round"
+      aria-hidden
     >
       <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
     </svg>
@@ -236,6 +242,7 @@ function ArrowRightIcon() {
       strokeLinecap="round"
       strokeLinejoin="round"
       className="ml-2"
+      aria-hidden
     >
       <path d="M5 12h14M12 5l7 7-7 7" />
     </svg>
@@ -306,7 +313,7 @@ export default function ServicesPage() {
               lineHeight: "32.5px",
             }}
           >
-            From concept to deployment, we deliver solutions designed to help
+            From concept to deployment, we deliver Python backend development, .NET development services, and solutions designed to help
             your
             <br />
             business grow and succeed in the digital world.
@@ -329,7 +336,10 @@ export default function ServicesPage() {
       </section>
 
       {/* Services grid */}
-      <section className="relative bg-white px-8 pt-12 pb-24 md:px-20 md:pt-16">
+      <section className="relative bg-white px-8 pt-12 pb-24 md:px-20 md:pt-16" aria-labelledby="services-section-heading">
+        <h2 id="services-section-heading" className="sr-only">
+          Services
+        </h2>
         <div
           className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-[rgba(238,242,255,0.30)] to-transparent"
           aria-hidden
