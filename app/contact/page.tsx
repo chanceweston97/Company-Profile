@@ -77,6 +77,9 @@ function ContactCard({
 }
 
 export default function ContactPage() {
+  const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+  const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+  const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -84,24 +87,41 @@ export default function ContactPage() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+  const [isSending, setIsSending] = useState(false);
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setSubmitError("");
+    setIsSending(true);
+
+    if (!serviceId || !templateId || !publicKey) {
+      setSubmitError("Email service is not configured yet. Please try again shortly.");
+      setIsSending(false);
+      return;
+    }
 
     emailjs
       .sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? "YOUR_SERVICE_ID",
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? "YOUR_TEMPLATE_ID",
+        serviceId,
+        templateId,
         e.currentTarget,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ?? "YOUR_PUBLIC_KEY",
+        publicKey,
       )
       .then(() => {
-        alert("Message sent successfully!");
         setSubmitted(true);
+        setIsSending(false);
       })
       .catch((error) => {
-        console.error("EmailJS error:", error);
-        alert("Failed to send message. Please try again.");
+        const message =
+          typeof error === "object" &&
+          error !== null &&
+          "text" in error &&
+          typeof error.text === "string"
+            ? error.text
+            : "Failed to send message. Please try again.";
+        setSubmitError(message);
+        setIsSending(false);
       });
   }
 
@@ -240,11 +260,33 @@ export default function ContactPage() {
                 Send Us a Message
               </h2>
               {submitted ? (
-                <p className="mt-8 text-[15.3px] text-[#64748B]">
-                  Thank you! We&apos;ll get back to you as soon as possible.
-                </p>
+                <div className="mt-8 rounded-2xl border border-[#E5E7EB] bg-[#F8FAFC] p-8 text-center">
+                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#EEF2FF] text-[#6366F1]">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                      <path d="M20 6 9 17l-5-5" />
+                    </svg>
+                  </div>
+                  <h3
+                    className="mt-5 text-[25.5px] font-bold leading-9 text-[#0F172A]"
+                    style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
+                  >
+                    Message Sent Successfully
+                  </h3>
+                  <p
+                    className="mt-3 text-[15.3px] text-[#64748B]"
+                    style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
+                  >
+                    Thanks for contacting us, we will respond within 24 hours.
+                  </p>
+                </div>
               ) : (
                 <form onSubmit={handleSubmit} className="mt-8 space-y-6">
+                  {/* Extra EmailJS fields so inbox clearly shows sender identity */}
+                  <input type="hidden" name="from_name" value={formData.name} />
+                  <input type="hidden" name="from_email" value={formData.email} />
+                  <input type="hidden" name="reply_to" value={formData.email} />
+                  <input type="hidden" name="sender_name" value={formData.name} />
+                  <input type="hidden" name="sender_email" value={formData.email} />
                   <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                     <div className="space-y-2">
                       <label className="flex items-center gap-1 text-[11.9px] font-medium leading-5 text-[#0F172A]">
@@ -329,6 +371,7 @@ export default function ContactPage() {
                   </div>
                   <button
                     type="submit"
+                    disabled={isSending}
                     className="w-full rounded-full bg-[#6366F1] py-4 text-[15.3px] font-medium text-white shadow-lg shadow-indigo-500/20 transition-opacity hover:opacity-95"
                     style={{
                       fontFamily: "var(--font-inter), Inter, sans-serif",
@@ -337,8 +380,16 @@ export default function ContactPage() {
                         "0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(0, 0, 0, 0), 0px 20px 25px -5px rgba(99, 102, 241, 0.20), 0px 8px 10px -6px rgba(99, 102, 241, 0.20)",
                     }}
                   >
-                    Send Message
+                    {isSending ? "Sending..." : "Send Message"}
                   </button>
+                  {submitError ? (
+                    <p
+                      className="text-center text-sm text-[#DC2626]"
+                      style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}
+                    >
+                      {submitError}
+                    </p>
+                  ) : null}
                 </form>
               )}
             </div>

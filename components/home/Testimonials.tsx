@@ -20,8 +20,8 @@ const testimonials = [
   {
     quote:
       '"The best company we have worked with. Clear communication, expert technical skills, and a genuine commitment to our success."',
-    name: "Ryan Rader",
-    role: "CEO at HavenLifeStyles",
+    name: "Matt McAfee",
+    role: "CEO at WCF Consulting",
     initial: "E",
   },
 ];
